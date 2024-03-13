@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyWebFormApp.BLL;
 using MyWebFormApp.BLL.DTOs;
@@ -20,6 +21,7 @@ namespace SampleMVC.Controllers
 
         public IActionResult Index(int CategoryID)
         {
+
             if (TempData["Message"] != null)
             {
                 ViewBag.Message = TempData["Message"]?.ToString();

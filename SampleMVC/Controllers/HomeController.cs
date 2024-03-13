@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 using MyWebFormApp.BLL;
+using MyWebFormApp.BLL.DTOs;
 namespace SampleMVC.Controllers;
 
 public class HomeController : Controller
@@ -7,6 +9,7 @@ public class HomeController : Controller
     // Home/Index
     public IActionResult Index()
     {
+
         ViewData["Title"] = "Home Page";
         return View();
     }
